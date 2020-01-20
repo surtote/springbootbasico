@@ -10,13 +10,13 @@ import model.Student;
 @Controller
 public class StudentController {
 
-	@PostMapping(path = "/addStudentForm")
+	@PostMapping("addStudentForm")
 	public void showStudent(Student student) {
 		System.out.println(student.toString());
 	}
 
-	@GetMapping(path = "/addStudentPage")
-	public ModelAndView studentPage() {
+	@GetMapping("addStudent")
+	public ModelAndView addStudentPage() {
 		ModelAndView mc = new ModelAndView();
 		mc.setViewName("addStudentPage");
 		mc.addObject(new Student());

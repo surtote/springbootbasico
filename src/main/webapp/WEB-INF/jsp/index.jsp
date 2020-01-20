@@ -8,7 +8,7 @@
 </head>
 <body>
 	<div>
-		<a href="addStudentPage">Quiero añadir un nuevo alumno</a>
+		<a href="addStudent">Quiero añadir un nuevo alumno</a>
 	</div>
 </body>
 </html>

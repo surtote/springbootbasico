@@ -4,7 +4,7 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan(basePackages = { "controller.*" })
+@ComponentScan(basePackages = { "controller" })
 public class BasicSpringBootApplication {
 
 	public static void main(String[] args) {
