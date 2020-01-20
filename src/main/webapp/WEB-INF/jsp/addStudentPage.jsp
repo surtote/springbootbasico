@@ -10,7 +10,7 @@
 <title>Insertar nuevo alumno</title>
 </head>
 <body>
-	<form:form action="addStudent" method="post" modelAttribute="student">
+	<form:form action="addStudentForm" method="post" modelAttribute="student">
 		<span>Nombre:</span>
 		<form:input path="name" type="text" name="name"/>
 		<span>Apellidos:</span>
