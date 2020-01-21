@@ -11,15 +11,18 @@ import model.Student;
 public class StudentController {
 
 	@PostMapping("addStudentForm")
-	public void showStudent(Student student) {
+	public String showStudent(Student student) {
 		System.out.println(student.toString());
+		return "index";
 	}
 
 	@GetMapping("addStudent")
 	public ModelAndView addStudentPage() {
 		ModelAndView mc = new ModelAndView();
 		mc.setViewName("addStudentPage");
-		mc.addObject(new Student());
+		Student student = new Student();
+		student.setName("Alumno");
+		mc.addObject(student);
 		return mc;
 	}
 
