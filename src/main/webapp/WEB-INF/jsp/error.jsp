@@ -7,6 +7,12 @@
 <title>Error page</title>
 </head>
 <body>
-ERROR !!!!!!
+Insha's JORKAH podrás!
+
+<br/>
+<br/>
+
+
+.
 </body>
 </html>
