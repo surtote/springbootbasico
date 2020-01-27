@@ -10,5 +10,8 @@
 	<div>
 		<a href="addStudent">Quiero añadir un nuevo alumno</a>
 	</div>
+	<div>
+		<a href="callControler">Pasar parametros</a>
+	</div>
 </body>
 </html>

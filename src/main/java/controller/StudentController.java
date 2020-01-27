@@ -16,6 +16,11 @@ public class StudentController {
 		return "index";
 	}
 
+	@GetMapping("callControler")
+	public String showStudent() {
+		return "formWithParams";
+	}
+
 	@GetMapping("addStudent")
 	public ModelAndView addStudentPage() {
 		ModelAndView mc = new ModelAndView();
@@ -25,5 +30,6 @@ public class StudentController {
 		mc.addObject(student);
 		return mc;
 	}
+
 
 }
