@@ -2,7 +2,9 @@ package controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import model.Student;
@@ -17,8 +19,17 @@ public class StudentController {
 	}
 
 	@GetMapping("callControler")
-	public String showStudent() {
-		return "formWithParams";
+	public ModelAndView showStudent() {
+		ModelAndView modelAndView = new ModelAndView("formWithParams");
+		modelAndView.addObject(new Student());
+		return modelAndView;
+	}
+
+	@PostMapping("showparam")
+	public String showparam(@RequestParam String msg, @ModelAttribute(name = "student") Student student) {
+		System.out.println(msg);
+		System.out.println(student);
+		return "";
 	}
 
 	@GetMapping("addStudent")
