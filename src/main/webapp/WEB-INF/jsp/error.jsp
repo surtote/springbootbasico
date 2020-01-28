@@ -7,8 +7,7 @@
 <title>Error page</title>
 </head>
 <body>
-Insha's JORKAH podrás!
-
+Ha sucedido un error!
 <br/>
 <br/>
 
