@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 @Profile("test")
 public class TestConfig implements Config {
 
-	@Value("#{app.cadenatest}")
+	@Value("${app.cadena}")
 	private
 	String cadena;
 

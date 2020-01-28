@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 @Profile("pro")
 public class ProConfig implements Config {
 
-	@Value("${app.cadenapro}")
+	@Value("${app.cadena}")
 	private
 	String cadena;
 
