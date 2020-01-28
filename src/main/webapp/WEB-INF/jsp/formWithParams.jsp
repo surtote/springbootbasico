@@ -8,10 +8,14 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form action="showparam" method="post" >
+
+<form:form action="showparam" method="post" modelAttribute="student">
     <input type="text" value="msg" name="msg" />
+    <form:input type="text" name="name" path="name"  />
+    <form:input type="text" name="surname" path="surname"   />
     <input type="submit"/>     
-</form>
+</form:form>
+
 
 </body>
 </html>

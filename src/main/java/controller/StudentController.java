@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.view.RedirectView;
 
 import model.Student;
 
@@ -18,14 +19,17 @@ public class StudentController {
 	}
 
 	@GetMapping("callControler")
-	public String showStudent() {
-		return "formWithParams";
+	public ModelAndView showStudent() {
+		ModelAndView modelAndView = new ModelAndView("formWithParams");
+		modelAndView.addObject(new Student());
+		return modelAndView;
 	}
 
 	@PostMapping("showparam")
-	public String showparam(@RequestParam String msg) {
+	public RedirectView showparam(Student student, @RequestParam String msg) {
 		System.out.println(msg);
-		return "";
+		System.out.println(student);
+		return new RedirectView("callControler");
 	}
 
 	@GetMapping("addStudent")
